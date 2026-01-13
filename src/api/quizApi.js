@@ -34,7 +34,59 @@ export const fetchQuestions = async () => {
 
     return formattedData;
   } catch (error) {
-    console.error("Error Fetching:", error);
-    return [];
+    console.warn("API Gagal/Limit Habis, menggunakan data dummy...", error);
+
+    return [
+      {
+        question: "Mode Offline: Siapa penemu lampu pijar?",
+        correctAnswer: "Thomas Edison",
+        answers: ["Nikola Tesla", "Thomas Edison", "Einstein", "Newton"],
+      },
+      {
+        question: "Mode Offline: 1 + 1 = ?",
+        correctAnswer: "2",
+        answers: ["1", "2", "3", "4"],
+      },
+      {
+        question: "Mode Offline: Siapa penemu Arus AC?",
+        correctAnswer: "Nikola Tesla",
+        answers: ["Nikola Tesla", "Thomas Tesla", "Einstein", "Newton"],
+      },
+      {
+        question: "Mode Offline: 1 + 1 = ?",
+        correctAnswer: "2",
+        answers: ["1", "2", "3", "4"],
+      },
+      {
+        question: "Mode Offline: 3 + 1 = ?",
+        correctAnswer: "4",
+        answers: ["1", "2", "3", "4"],
+      },
+      {
+        question: "Mode Offline: 10 + 001 = ?",
+        correctAnswer: "11",
+        answers: ["1", "11", "3", "4"],
+      },
+      {
+        question: "Mode Offline: 30 + 1 = ?",
+        correctAnswer: "31",
+        answers: ["1", "2", "31", "400"],
+      },
+      {
+        question: "Mode Offline: 3 + 11 = ?",
+        correctAnswer: "14",
+        answers: ["1", "2", "3", "14"],
+      },
+      {
+        question: "Mode Offline: 10 + 1001 = ?",
+        correctAnswer: "1011",
+        answers: ["1011", "2", "3", "4"],
+      },
+      {
+        question: "Mode Offline: 301 + 1 = ?",
+        correctAnswer: "302",
+        answers: ["1", "2", "302", "400"],
+      },
+    ];
   }
 };
